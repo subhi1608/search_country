@@ -1,38 +1,97 @@
 .App {
-  text-align: center;
+	font-size: 16px;
+	padding: 1rem 0.5rem;
+	color: rgb(33, 37, 41);
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+		Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchable_city {
+	width: 18vw;
+	height: 38px;
+	font-size: 16px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(206, 212, 218);
+	padding: 6px 6px 6px 12px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchable_city:focus {
+	border: 1px solid #7952b3;
+	box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchable_container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.keyboard_shortcut {
+	position: absolute;
+	left: 195px;
+	top: 15px;
+	font-size: 12px;
+	border: 1px solid rgb(222, 226, 230);
+	border-radius: 2px;
+	height: 24px;
+	padding: 4px;
 }
-
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+tr,
+th,
+tbody,
+table {
+	display: block;
+}
+table {
+	margin: 1rem 0rem;
+}
+th {
+	font-weight: 700;
+}
+th,
+td {
+	padding: 8px;
+}
+tr {
+	border-bottom: 1px solid rgb(222, 226, 230);
+}
+td:first-child {
+	min-width: 10vw;
+	text-align: center;
+}
+td:nth-child(2) {
+	min-width: 45vw;
+	text-align: center;
+}
+td:nth-child(3) {
+	min-width: 45vw;
+	text-align: center;
+}
+
+.pagination {
+	padding: 10px;
+	margin: 15px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination > span {
+	padding: 15px 20px;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+
+.pagination__disable {
+	opacity: 0;
+}
+
+.pagination__selected {
+	background-color: rgb(220, 220, 220);
 }
